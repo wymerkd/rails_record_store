@@ -22,12 +22,6 @@ class AlbumsController < ApplicationController
 
   # Other controller methods go here.
 
-  private
-  def album_params
-    params.require(:album).permit(:name, :genre)
-  end
-end
-
 def edit
   @album = Album.find(params[:id])
   render :edit
@@ -35,7 +29,7 @@ end
 
 def show
   @album = Album.find(params[:id])
-  render :show.
+  render :show
 end
 
 def update
@@ -53,4 +47,8 @@ def destroy
   redirect_to albums_path
 end
 
+private
+def album_params
+  params.require(:album).permit(:name, :genre)
+end
 end
