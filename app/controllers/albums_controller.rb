@@ -14,6 +14,7 @@ class AlbumsController < ApplicationController
   def create
     @album = Album.new(album_params)
     if @album.save
+      flash[:notice] = "Now thats motherfucking album!"
       redirect_to albums_path
     else
       render :new
