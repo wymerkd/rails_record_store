@@ -39,3 +39,6 @@ To fix no database error
 Epicodus-7A:rails_record_store Guest$ rails db:migrate
 Epicodus-7A:rails_record_store Guest$ rails db:prepare
 Epicodus-7A:rails_record_store Guest$ rails s
+
+
+run `spring stop` before `rails g migration create_album` to stop console from freezing.
